@@ -1,0 +1,28 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #000; font-family: sans-serif; height: 100vh; overflow: hidden; }
+
+.app-wrapper {
+    display: flex; flex-direction: column; height: 100vh;
+    max-width: 500px; margin: 0 auto; background: white;
+}
+
+.header { background: #667eea; color: white; padding: 15px; text-align: center; flex-shrink: 0; }
+
+.chat-area { 
+    flex: 1; overflow-y: auto; padding: 15px; 
+    background: #f7f9fc; display: flex; flex-direction: column; gap: 10px; 
+}
+
+/* Burbujas de chat */
+.msg { padding: 10px 15px; border-radius: 15px; max-width: 85%; font-size: 16px; }
+.user { align-self: flex-end; background: #e2e8f0; color: #333; }
+.kimi { align-self: flex-start; background: #667eea; color: white; }
+
+.input-container {
+    display: flex; padding: 15px; background: white; 
+    border-top: 1px solid #ddd; gap: 10px; flex-shrink: 0;
+    padding-bottom: max(15px, env(safe-area-inset-bottom));
+}
+
+input { flex: 1; padding: 12px; border: 1px solid #ccc; border-radius: 25px; font-size: 16px; outline: none; }
+button { background: #667eea; color: white; border: none; width: 45px; height: 45px; border-radius: 50%; font-size: 20px; }
